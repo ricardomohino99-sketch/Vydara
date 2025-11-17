@@ -1,59 +1,65 @@
-<main class="main-content info-page">
-    <h2>Información de Vydara</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydara - Información General</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <section id="tutoriales" class="content-block">
-        <h3>📚 Tutoriales y Foro</h3>
-        <p>Aquí encontrarás guías de juego. Solo Admins y Devs pueden crear nuevas entradas.</p>
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="assets/img/logo_vydara.png" alt="Logo de Vydara" class="logo">
+            <h1>Vydara</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Inicio</a>
+            
+            <div class="dropdown">
+                <a href="informacion.html" class="nav-link dropbtn active">Información</a>
+                <div class="dropdown-content">
+                    <a href="info/tutoriales.html">Tutoriales</a>
+                    <a href="info/lore.html">Lore</a>
+                    <a href="tienda.html">Tienda</a>
+                    <a href="info/wikipedia.html">Wikipedia</a>
+                    <a href="info/dudas.html">Dudas</a>
+                </div>
+            </div>
+
+            <a href="noticias.html" class="nav-link">Noticias</a>
+            <a href="sobre_nosotros.html" class="nav-link">Sobre Nosotros</a>
+        </nav>
         
-        <button id="new-tutorial-btn" class="cta-button admin-only" style="display: none;">Crear Nueva Entrada</button>
+        <button id="auth-button" class="auth-btn">Iniciar Sesión / Registrarse</button>
+    </header>
+
+    <main class="main-content info-page">
+        <h2>ℹ️ Explora el Mundo de Vydara</h2>
         
-        <div class="forum-search">
-            <input type="text" placeholder="Buscar en tutoriales...">
-            <div id="forum-entries">
-                <article class="entry">
-                    <h4>Cómo empezar en Vydara (por Admin1)</h4>
-                    <p>Primeros pasos, con imágenes y un vídeo explicativo.</p>
-                    </article>
+        <div class="content-block">
+            <h3>Bienvenido a la Central de Datos</h3>
+            <p>Usa el menú superior para acceder a guías, la historia del juego, la tienda, la wiki completa o para enviar tus dudas al equipo de desarrollo.</p>
+            
+            <div class="quick-links" style="margin-top: 20px;">
+                <a href="info/tutoriales.html" class="cta-button">Ver Tutoriales</a>
+                <a href="tienda.html" class="cta-button">Ir a la Tienda</a>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section id="lore" class="content-block">
-        <h3>📜 El Lore de Vydara</h3>
-        <p>Descubre la historia del mundo, facciones y personajes.</p>
-        </section>
-
-    <section id="tienda" class="content-block">
-        <h3>💰 Tienda</h3>
-        <div class="shop-categories">
-            <button class="shop-tab active" onclick="showShop('merch')">Merchandising</button>
-            <button class="shop-tab" onclick="showShop('ingame')">Compras In-Game (Estéticas)</button>
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Contacto</a>
         </div>
-        
-        <div id="merch-items" class="shop-display">
-            <p>Camisetas, tazas, posters...</p>
-        </div>
-        
-        <div id="ingame-items" class="shop-display" style="display:none;">
-            <p>Skins de armas, monturas raras, emotes...</p>
-        </div>
-    </section>
+        <p>&copy; <span id="current-year"></span> Nombre de la Compañía. Todos los derechos reservados.</p>
+        <div class="social-media">
+            </div>
+    </footer>
 
-    <section id="wikipedia" class="content-block">
-        <h3>📖 Wikipedia del Juego</h3>
-        <p>La base de datos completa de misiones, PNJs, objetos y enemigos de Vydara.</p>
-        <a href="#" class="cta-button">Ir a la Wiki de Vydara</a>
-    </section>
-
-    <section id="dudas" class="content-block">
-        <h3>❓ Envíanos tus Dudas</h3>
-        <p>Usa el siguiente formulario. Las respuestas solo serán vistas por el equipo de desarrollo/administración.</p>
-        
-        <form id="doubt-form" class="simple-form">
-            <input type="text" placeholder="Tu nombre / Usuario" required>
-            <input type="email" placeholder="Tu Correo Electrónico" required>
-            <textarea placeholder="Escribe tu duda o sugerencia aquí..." rows="5" required></textarea>
-            <button type="submit" class="cta-button">Enviar Duda</button>
-        </form>
-    </section>
-</main>
+    <script src="js/script.js"></script>
+</body>
+</html>

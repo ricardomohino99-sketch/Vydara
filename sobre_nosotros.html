@@ -1,24 +1,76 @@
-<main class="main-content about-page">
-    <h2>🚀 Sobre Vydara y la Compañía</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydara - Sobre Nosotros</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <section class="content-block">
-        <h3>Nuestra Misión</h3>
-        <p>Somos un equipo apasionado dedicado a crear mundos inmersivos. Vydara es la culminación de años de trabajo y amor por los videojuegos.</p>
-    </section>
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="assets/img/logo_vydara.png" alt="Logo de Vydara" class="logo">
+            <h1>Vydara</h1>
+        </div>
 
-    <section class="content-block">
-        <h3>El Desarrollo de Vydara</h3>
-        <p>El juego está siendo desarrollado utilizando [Motor de Juego - ej: Unreal Engine 5] y un enfoque en la narrativa profunda y la experiencia multijugador.</p>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Inicio</a>
+            
+            <div class="dropdown">
+                <a href="informacion.html" class="nav-link dropbtn">Información</a>
+                <div class="dropdown-content">
+                    <a href="info/tutoriales.html">Tutoriales</a>
+                    <a href="info/lore.html">Lore</a>
+                    <a href="tienda.html">Tienda</a>
+                    <a href="info/wikipedia.html">Wikipedia</a>
+                    <a href="info/dudas.html">Dudas</a>
+                </div>
+            </div>
+
+            <a href="noticias.html" class="nav-link">Noticias</a>
+            <a href="sobre_nosotros.html" class="nav-link active">Sobre Nosotros</a>
+        </nav>
         
-    </section>
+        <button id="auth-button" class="auth-btn">Iniciar Sesión / Registrarse</button>
+    </header>
 
-    <section class="content-block">
-        <h3>Conoce al Equipo</h3>
-        <div class="team-grid">
-            <div class="team-member">
-                <h4>CEO & Director Creativo</h4>
-                <p>Maxucado (Ricardo M.M.)</p>
+    <main class="main-content about-page">
+        <h2>🚀 Sobre Vydara y la Compañía</h2>
+
+        <section class="content-block">
+            <h3>Nuestra Misión</h3>
+            <p>Somos un equipo apasionado dedicado a crear mundos inmersivos y memorables. Vydara es la culminación de años de esfuerzo, fusionando narrativa profunda con mecánicas de juego innovadoras.</p>
+        </section>
+
+        <section class="content-block">
+            <h3>El Desarrollo de Vydara</h3>
+            <p>El juego está siendo desarrollado utilizando tecnologías de vanguardia (ej. Unreal Engine 5) y ha pasado por varias fases de alpha y beta. Nos enfocamos en el feedback de la comunidad para hacer de Vydara la mejor experiencia posible.</p>
+            
+        </section>
+
+        <section class="content-block">
+            <h3>Conoce al Equipo</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>CEO & Director Creativo</h4>
+                    <p>Maxucado (Ricardo M.M.)</p>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Nombre de la Compañía. Todos los derechos reservados.</p>
+        <div class="social-media">
             </div>
-            </div>
-    </section>
-</main>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

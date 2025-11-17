@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydara - Tutoriales</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="../assets/img/logo_vydara.png" alt="Logo de Vydara" class="logo">
+            <h1>Vydara</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="../index.html" class="nav-link">Inicio</a>
+            
+            <div class="dropdown">
+                <a href="../informacion.html" class="nav-link dropbtn">Información</a>
+                <div class="dropdown-content">
+                    <a href="tutoriales.html">Tutoriales</a>
+                    <a href="lore.html">Lore</a>
+                    <a href="../tienda.html">Tienda</a>
+                    <a href="wikipedia.html">Wikipedia</a>
+                    <a href="dudas.html">Dudas</a>
+                </div>
+            </div>
+
+            <a href="../noticias.html" class="nav-link">Noticias</a>
+            <a href="../sobre_nosotros.html" class="nav-link">Sobre Nosotros</a>
+        </nav>
+        
+        <button id="auth-button" class="auth-btn">Iniciar Sesión / Registrarse</button>
+    </header>
+
+    <main class="main-content info-page">
+        <h2>📚 Tutoriales y Foro</h2>
+        <p>Guías de la comunidad y del equipo para dominar Vydara. Solo **Admins/Devs** pueden crear nuevas entradas.</p>
+        
+        <div class="content-block">
+            <button id="new-tutorial-btn" class="cta-button admin-only" style="display: none;">Crear Nueva Entrada</button>
+            
+            <div class="forum-search">
+                <input type="text" placeholder="Buscar en tutoriales..." class="search-input">
+                <div id="forum-entries" class="forum-grid" style="margin-top: 20px;">
+                    <article class="entry tutorial-card content-block">
+                        <h4>Cómo empezar en Vydara: Guía de Novato</h4>
+                        <p class="post-meta">Publicado por DevTeam - 10/11/2025</p>
+                        <a href="#" class="read-more">Ver guía completa</a>
+                    </article>
+                    <article class="entry tutorial-card content-block">
+                        <h4>Guía Avanzada: Combos de Clase X</h4>
+                        <p class="post-meta">Publicado por Admin1 - 12/11/2025</p>
+                        <a href="#" class="read-more">Ver guía completa</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Nombre de la Compañía. Todos los derechos reservados.</p>
+        <div class="social-media">
+            </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

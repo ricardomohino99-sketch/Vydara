@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydara - Dudas</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="../assets/img/logo_vydara.png" alt="Logo de Vydara" class="logo">
+            <h1>Vydara</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="../index.html" class="nav-link">Inicio</a>
+            
+            <div class="dropdown">
+                <a href="../informacion.html" class="nav-link dropbtn">Información</a>
+                <div class="dropdown-content">
+                    <a href="tutoriales.html">Tutoriales</a>
+                    <a href="lore.html">Lore</a>
+                    <a href="../tienda.html">Tienda</a>
+                    <a href="wikipedia.html">Wikipedia</a>
+                    <a href="dudas.html">Dudas</a>
+                </div>
+            </div>
+
+            <a href="../noticias.html" class="nav-link">Noticias</a>
+            <a href="../sobre_nosotros.html" class="nav-link">Sobre Nosotros</a>
+        </nav>
+        
+        <button id="auth-button" class="auth-btn">Iniciar Sesión / Registrarse</button>
+    </header>
+
+    <main class="main-content info-page">
+        <h2>❓ Envíanos tus Dudas</h2>
+        <p>Si tienes alguna pregunta, sugerencia o problema, usa este formulario. Solo los **Admins/Devs** verán tu mensaje.</p>
+        
+        <div class="content-block">
+            <form id="doubt-form" class="simple-form">
+                <input type="text" placeholder="Tu nombre / Usuario" required>
+                <input type="email" placeholder="Tu Correo Electrónico" required>
+                <textarea placeholder="Escribe tu duda o sugerencia aquí..." rows="7" required></textarea>
+                <button type="submit" class="cta-button">Enviar Duda</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Nombre de la Compañía. Todos los derechos reservados.</p>
+        <div class="social-media">
+            </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

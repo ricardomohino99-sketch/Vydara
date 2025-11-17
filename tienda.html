@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vydara - El Juego | Inicio</title>
+    <title>Vydara - Tienda</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,35 +35,31 @@
         <button id="auth-button" class="auth-btn">Iniciar Sesión / Registrarse</button>
     </header>
 
-    <main class="main-content homepage">
-        <div class="video-container">
-            <video autoplay muted loop id="video-bg">
-                <source src="assets/video/background.mp4" type="video/mp4">
-                Tu navegador no soporta el video de fondo.
-            </video>
-            <div class="overlay"></div>
+    <main class="main-content info-page">
+        <h2>💰 Tienda Vydara</h2>
+        <p>Consigue *merchandising* exclusivo o ítems estéticos para personalizar tu experiencia de juego.</p>
+
+        <div class="content-block">
+            <div class="shop-categories">
+                <button class="shop-tab active" onclick="showShop('merch')">Merchandising</button>
+                <button class="shop-tab" onclick="showShop('ingame')">Compras In-Game (Estéticas)</button>
+            </div>
             
-            <div class="hero-content">
-                <h2>¡Adéntrate en el mundo de Vydara!</h2>
-                <p>Regístrate y comienza tu aventura hoy mismo.</p>
-                <button id="download-button" class="cta-button" disabled>Descargar Juego (¡Necesitas registrarte!)</button>
+            <div id="merch-items" class="shop-display">
+                <h3>Merchandising</h3>
+                <div class="item-grid">
+                    <p>Aquí irán los productos de merchandising (Backend).</p>
+                </div>
+            </div>
+            
+            <div id="ingame-items" class="shop-display" style="display:none;">
+                <h3>Ítems Estéticos (In-Game)</h3>
+                <div class="item-grid">
+                    <p>Aquí irán los ítems puramente estéticos para el juego (Backend).</p>
+                </div>
             </div>
         </div>
     </main>
-    
-    <div id="auth-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Registro e Inicio de Sesión</h3>
-            <form id="auth-form">
-                <input type="text" id="username" placeholder="Usuario" required>
-                <input type="email" id="email" placeholder="Correo Electrónico" required>
-                <input type="password" id="password" placeholder="Contraseña" required>
-                <button type="submit">Registrarse / Iniciar Sesión</button>
-            </form>
-        </div>
-    </div>
-
 
     <footer class="main-footer">
         <div class="footer-links">

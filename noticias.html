@@ -1,18 +1,75 @@
-<main class="main-content blog-page">
-    <h2>📰 Últimas Noticias de Vydara</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydara - Noticias</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <button id="new-post-btn" class="cta-button admin-only" style="display: none;">Publicar Nueva Noticia</button>
-    
-    <div id="news-container" class="blog-grid">
-        <article class="news-post">
-            <img src="assets/img/news_banner_1.jpg" alt="Banner de Noticia 1">
-            <h3>Actualización 1.2: El Despertar del Dragón</h3>
-            <p class="post-meta">Publicado por DevTeam el 15 de Noviembre de 2025</p>
-            <p>¡Nuevos jefes, zonas y recompensas te esperan!</p>
-            <a href="post-1.html" class="read-more">Leer más...</a>
-        </article>
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="assets/img/logo_vydara.png" alt="Logo de Vydara" class="logo">
+            <h1>Vydara</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Inicio</a>
+            
+            <div class="dropdown">
+                <a href="informacion.html" class="nav-link dropbtn">Información</a>
+                <div class="dropdown-content">
+                    <a href="info/tutoriales.html">Tutoriales</a>
+                    <a href="info/lore.html">Lore</a>
+                    <a href="tienda.html">Tienda</a>
+                    <a href="info/wikipedia.html">Wikipedia</a>
+                    <a href="info/dudas.html">Dudas</a>
+                </div>
+            </div>
+
+            <a href="noticias.html" class="nav-link active">Noticias</a>
+            <a href="sobre_nosotros.html" class="nav-link">Sobre Nosotros</a>
+        </nav>
         
-        <article class="news-post">
+        <button id="auth-button" class="auth-btn">Iniciar Sesión / Registrarse</button>
+    </header>
+
+    <main class="main-content blog-page">
+        <h2>📰 Últimas Noticias de Vydara</h2>
+
+        <button id="new-post-btn" class="cta-button admin-only" style="display: none;">Publicar Nueva Noticia</button>
+        
+        <div id="news-container" class="blog-grid">
+            <article class="news-post">
+                <img src="assets/img/news_banner_1.jpg" alt="Banner de Noticia 1">
+                <h3>Actualización 1.2: El Despertar del Dragón</h3>
+                <p class="post-meta">Publicado por DevTeam el 15 de Noviembre de 2025</p>
+                <p style="padding: 0 15px 15px;">¡Nuevos jefes, zonas y recompensas te esperan! Lee el parche completo...</p>
+                <a href="post-1.html" class="read-more">Leer más...</a>
             </article>
-    </div>
-</main>
+            
+            <article class="news-post">
+                <img src="assets/img/news_banner_2.jpg" alt="Banner de Noticia 2">
+                <h3>Evento de Invierno: Nieves de Escarcha</h3>
+                <p class="post-meta">Publicado por Admin1 el 01 de Diciembre de 2025</p>
+                <p style="padding: 0 15px 15px;">Participa en el evento para ganar ítems estéticos exclusivos de temporada...</p>
+                <a href="post-2.html" class="read-more">Leer más...</a>
+            </article>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Nombre de la Compañía. Todos los derechos reservados.</p>
+        <div class="social-media">
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

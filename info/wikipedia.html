@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydara - Wikipedia</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="../assets/img/logo_vydara.png" alt="Logo de Vydara" class="logo">
+            <h1>Vydara</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="../index.html" class="nav-link">Inicio</a>
+            
+            <div class="dropdown">
+                <a href="../informacion.html" class="nav-link dropbtn">Información</a>
+                <div class="dropdown-content">
+                    <a href="tutoriales.html">Tutoriales</a>
+                    <a href="lore.html">Lore</a>
+                    <a href="../tienda.html">Tienda</a>
+                    <a href="wikipedia.html">Wikipedia</a>
+                    <a href="dudas.html">Dudas</a>
+                </div>
+            </div>
+
+            <a href="../noticias.html" class="nav-link">Noticias</a>
+            <a href="../sobre_nosotros.html" class="nav-link">Sobre Nosotros</a>
+        </nav>
+        
+        <button id="auth-button" class="auth-btn">Iniciar Sesión / Registrarse</button>
+    </header>
+
+    <main class="main-content info-page">
+        <h2>📖 Wikipedia Oficial de Vydara</h2>
+        <p>La base de datos completa y oficial: misiones, PNJs, objetos y la mecánica de juego.</p>
+        
+        <div class="content-block wiki-content">
+            <h3>Buscador Rápido</h3>
+            <input type="text" placeholder="Buscar PNJs, objetos o misiones..." class="search-input">
+            
+            <div class="wiki-sections" style="margin-top: 15px; display: flex; gap: 10px;">
+                <a href="#" class="cta-button" style="padding: 10px 15px; font-size: 1em;">Misiones</a>
+                <a href="#" class="cta-button" style="padding: 10px 15px; font-size: 1em;">PNJs</a>
+                <a href="#" class="cta-button" style="padding: 10px 15px; font-size: 1em;">Objetos</a>
+            </div>
+            
+            <p class="note" style="margin-top: 20px; font-style: italic; color: #aaa;">El contenido detallado se cargará desde el Backend/DB.</p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Nombre de la Compañía. Todos los derechos reservados.</p>
+        <div class="social-media">
+            </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
