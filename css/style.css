@@ -1,0 +1,454 @@
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #0056b3; /* Azul oscuro */
+    --accent-color: #e65200; /* Naranja/Rojo para CTA */
+    --text-light: #f4f4f4;
+    --text-dark: #333;
+    --bg-dark: #1a1a1a;
+    --bg-medium: #2c2c2c;
+    --bg-light: #333;
+}
+
+/* -------------------- Estilos Generales -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    color: var(--text-light);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* -------------------- Encabezado (Header) -------------------- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    /* Difuminado Moderno: Gradient */
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.logo {
+    height: 40px; 
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    font-weight: bold;
+    padding: 10px 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Botón de Autenticación/Perfil */
+.auth-btn, .profile-menu {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.auth-btn:hover, .profile-menu:hover {
+    background-color: #ff6a00;
+}
+
+.profile-menu {
+    white-space: nowrap; /* Evita que el nombre de usuario se rompa */
+}
+
+/* -------------------- Menú Desplegable (Dropdown) -------------------- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-light);
+    min-width: 180px;
+    box-shadow: 0 8px 16px 0px rgba(0,0,0,0.6);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: var(--text-light);
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+
+/* -------------------- Contenido Principal (General) -------------------- */
+.main-content {
+    padding: 40px 10%;
+    min-height: 80vh;
+}
+
+.content-block {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--bg-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content-block h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Botón de Acción Principal (CTA) */
+.cta-button {
+    background-color: var(--accent-color); 
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #ff6a00;
+    transform: scale(1.02);
+}
+
+.cta-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+}
+
+/* -------------------- Página de Inicio (Homepage) -------------------- */
+.video-container {
+    height: 90vh; 
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 4em;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* -------------------- Modal (Formulario de Auth) -------------------- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1001; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: var(--bg-dark);
+    margin: 5% auto; 
+    padding: 30px;
+    border: 2px solid var(--primary-color);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#auth-form input, #auth-form button, 
+.simple-form input, .simple-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    font-size: 1em;
+}
+
+#auth-form button {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+#auth-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* -------------------- Formularios Simples (Dudas/Códigos) -------------------- */
+.simple-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* -------------------- Estilos de Blog/Noticias -------------------- */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.news-post {
+    background-color: var(--bg-medium);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.news-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-post h3 {
+    padding: 15px;
+    color: var(--text-light);
+    border-bottom: none;
+}
+
+.post-meta {
+    font-size: 0.85em;
+    color: #aaa;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: block;
+    padding: 15px;
+    text-align: right;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* -------------------- Estilos de Tienda (Informacion.html) -------------------- */
+.shop-categories {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.shop-tab {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.shop-tab.active, .shop-tab:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+}
+
+.shop-display {
+    padding: 20px;
+    background-color: var(--bg-light);
+    border-radius: 6px;
+    border-top: 3px solid var(--primary-color);
+}
+
+/* -------------------- Estilos de Perfil de Usuario -------------------- */
+.profile-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #444;
+}
+
+.profile-tabs {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 0; /* Ajustamos para que se pegue a la sección */
+    flex-wrap: wrap; 
+}
+
+.profile-tab {
+    padding: 12px 18px;
+    border: none;
+    background-color: #333;
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.2s;
+    font-weight: bold;
+}
+
+.profile-tab.active {
+    background-color: var(--bg-medium);
+    border-bottom: 3px solid var(--primary-color);
+    color: var(--primary-color);
+    margin-bottom: -3px; /* Truco para que la línea no se vea */
+}
+
+.profile-section {
+    padding: 30px;
+    background-color: var(--bg-medium);
+    border-radius: 0 8px 8px 8px;
+    min-height: 300px;
+}
+
+.admin-action-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: var(--accent-color); 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.admin-action-btn:hover {
+    background-color: #ff6a00;
+}
+
+/* -------------------- Pie de Página (Footer) -------------------- */
+.main-footer {
+    background-color: #111;
+    color: #bbb;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    margin: 0 15px;
+    color: #bbb;
+    font-size: 1em;
+}
+
+.social-media {
+    margin-top: 10px;
+}

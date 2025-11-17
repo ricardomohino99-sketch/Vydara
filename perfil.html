@@ -1,0 +1,52 @@
+<main class="main-content profile-page">
+    <div class="profile-header">
+        <h2>👋 Bienvenido, <span id="profile-username">Usuario</span></h2>
+        <p id="account-role">Rol: Jugador Estándar</p>
+    </div>
+
+    <div class="profile-tabs">
+        <button class="profile-tab active" onclick="showProfileSection('info')">Mi Información</button>
+        <button class="profile-tab" onclick="showProfileSection('chars')">Personajes</button>
+        <button class="profile-tab" onclick="showProfileSection('credits')">Créditos y Suscripción</button>
+        <button class="profile-tab" onclick="showProfileSection('codes')">Canjear Códigos</button>
+        
+        <button class="profile-tab admin-dev-only" id="admin-panel-tab" style="display: none;" onclick="showProfileSection('admin')">Panel Admin/Dev</button>
+    </div>
+
+    <section id="info" class="profile-section active">
+        <h3>Información Personal</h3>
+        <p>Email: <span id="profile-email"></span></p>
+        <p>Fecha de Registro: <span id="profile-reg-date"></span></p>
+        </section>
+
+    <section id="chars" class="profile-section" style="display: none;">
+        <h3>Mis Personajes</h3>
+        <div class="character-list"></div>
+    </section>
+
+    <section id="credits" class="profile-section" style="display: none;">
+        <h3>Suscripción y Créditos</h3>
+        <p>Estado de Suscripción: <span id="sub-status">Gratis (Hasta Nivel 10)</span></p>
+        <p>Próximo Cargo: <span id="next-charge">N/A</span></p>
+        <button class="cta-button">Mejorar a Premium (10€/mes)</button>
+        
+        <div class="credits-info">
+            <h4>Créditos Vydara: </h4><span id="vydara-credits">1500</span>
+        </div>
+    </section>
+
+    <section id="codes" class="profile-section" style="display: none;">
+        <h3>Canjear Código Regalo</h3>
+        <form id="code-redeem-form" class="simple-form">
+            <input type="text" placeholder="Ingresa tu código aquí" required>
+            <button type="submit" class="cta-button">Canjear</button>
+        </form>
+    </section>
+
+    <section id="admin" class="profile-section admin-dev-only" style="display: none;">
+        <h3>⚙️ Panel de Control Avanzado</h3>
+        <button class="admin-action-btn">Ver Bandeja de Dudas</button>
+        <button class="admin-action-btn">Gestionar Usuarios y Roles</button>
+        <button class="admin-action-btn">Publicar Anuncio Global</button>
+        </section>
+</main>

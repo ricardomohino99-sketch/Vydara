@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vydara - El Juego</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="assets/img/logo_vydara.png" alt="Logo de Vydara" class="logo">
+            <h1>Vydara</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Inicio</a>
+            
+            <div class="dropdown">
+                <a href="informacion.html" class="nav-link dropbtn">Información</a>
+                <div class="dropdown-content">
+                    <a href="informacion.html#tutoriales">Tutoriales</a>
+                    <a href="informacion.html#lore">Lore</a>
+                    <a href="informacion.html#tienda">Tienda</a>
+                    <a href="informacion.html#wikipedia">Wikipedia</a>
+                    <a href="informacion.html#dudas">Dudas</a>
+                </div>
+            </div>
+
+            <a href="noticias.html" class="nav-link">Noticias</a>
+            <a href="sobre_nosotros.html" class="nav-link">Sobre Nosotros</a>
+        </nav>
+        
+        <button id="auth-button" class="auth-btn">Iniciar Sesión / Registrarse</button>
+        </header>
+
+    <main class="main-content homepage">
+        <div class="video-container">
+            <video autoplay muted loop id="video-bg">
+                <source src="assets/video/background.mp4" type="video/mp4">
+                Tu navegador no soporta el video de fondo.
+            </video>
+            <div class="overlay"></div>
+            
+            <div class="hero-content">
+                <h2>¡Adéntrate en el mundo de Vydara!</h2>
+                <p>Regístrate y comienza tu aventura hoy mismo.</p>
+                <button id="download-button" class="cta-button" disabled>Descargar Juego (¡Necesitas registrarte!)</button>
+            </div>
+        </div>
+    </main>
+    
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Registro e Inicio de Sesión</h3>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Usuario" required>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Registrarse / Iniciar Sesión</button>
+            </form>
+            </div>
+    </div>
+
+
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Nombre de la Compañía. Todos los derechos reservados.</p>
+        <div class="social-media">
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

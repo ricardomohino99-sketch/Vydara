@@ -1,0 +1,59 @@
+<main class="main-content info-page">
+    <h2>Información de Vydara</h2>
+
+    <section id="tutoriales" class="content-block">
+        <h3>📚 Tutoriales y Foro</h3>
+        <p>Aquí encontrarás guías de juego. Solo Admins y Devs pueden crear nuevas entradas.</p>
+        
+        <button id="new-tutorial-btn" class="cta-button admin-only" style="display: none;">Crear Nueva Entrada</button>
+        
+        <div class="forum-search">
+            <input type="text" placeholder="Buscar en tutoriales...">
+            <div id="forum-entries">
+                <article class="entry">
+                    <h4>Cómo empezar en Vydara (por Admin1)</h4>
+                    <p>Primeros pasos, con imágenes y un vídeo explicativo.</p>
+                    </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="lore" class="content-block">
+        <h3>📜 El Lore de Vydara</h3>
+        <p>Descubre la historia del mundo, facciones y personajes.</p>
+        </section>
+
+    <section id="tienda" class="content-block">
+        <h3>💰 Tienda</h3>
+        <div class="shop-categories">
+            <button class="shop-tab active" onclick="showShop('merch')">Merchandising</button>
+            <button class="shop-tab" onclick="showShop('ingame')">Compras In-Game (Estéticas)</button>
+        </div>
+        
+        <div id="merch-items" class="shop-display">
+            <p>Camisetas, tazas, posters...</p>
+        </div>
+        
+        <div id="ingame-items" class="shop-display" style="display:none;">
+            <p>Skins de armas, monturas raras, emotes...</p>
+        </div>
+    </section>
+
+    <section id="wikipedia" class="content-block">
+        <h3>📖 Wikipedia del Juego</h3>
+        <p>La base de datos completa de misiones, PNJs, objetos y enemigos de Vydara.</p>
+        <a href="#" class="cta-button">Ir a la Wiki de Vydara</a>
+    </section>
+
+    <section id="dudas" class="content-block">
+        <h3>❓ Envíanos tus Dudas</h3>
+        <p>Usa el siguiente formulario. Las respuestas solo serán vistas por el equipo de desarrollo/administración.</p>
+        
+        <form id="doubt-form" class="simple-form">
+            <input type="text" placeholder="Tu nombre / Usuario" required>
+            <input type="email" placeholder="Tu Correo Electrónico" required>
+            <textarea placeholder="Escribe tu duda o sugerencia aquí..." rows="5" required></textarea>
+            <button type="submit" class="cta-button">Enviar Duda</button>
+        </form>
+    </section>
+</main>
